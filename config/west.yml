@@ -12,6 +12,8 @@ manifest:
       url-base: https://github.com/janpfischer
     - name: m165437
       url-base: https://github.com/M165437
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -29,5 +31,9 @@ manifest:
     - name: prospector-zmk-module
       remote: mike1808
       revision: fix/new-status-screan-zmk-refactor
+    # numword (&num_word) — модуль urob; revision должна соответствовать ветке ZMK (здесь main)
+    - name: zmk-auto-layer
+      remote: urob
+      revision: main
   self:
     path: config
