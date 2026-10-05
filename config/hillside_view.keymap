@@ -483,12 +483,12 @@
             >;
         };
 
-        // 1 · Диктор (буквы Ru pro, гласные А О Е У И как в Dvorak) поверх ЙЦУКЕН
+        // 1 · Диктор (буквы Ru pro, гласные А О Е И У) поверх ЙЦУКЕН
         ru_layer {
             display-name = "RU";
             bindings = <
         &kp TAB          &kp W            &ru_comma        &ru_dot          &ru_soft         &kp Z   &kp P            &kp D            &kp R            &kp L            &kp X            &kp I
-        &kp ESC          &kp F            &kp J            &kp T            &kp E            &kp B   &kp K            &kp Y            &kp N            &kp C            &kp H            &kp Q
+        &kp ESC          &kp F            &kp J            &kp T            &kp B            &kp E   &kp K            &kp Y            &kp N            &kp C            &kp H            &kp Q
         &kp GRAVE        &kp A            &kp SQT          &kp LBKT         &kp S            &kp DOT   &kp COMMA        &kp V            &kp G            &kp U            &kp SEMI         &kp O
                                                                                              &none                               &none
                                           &ru_gui          &smart_shft_ru   &ru_ctrl         &trans             &trans           &trans           &ru_alt          &trans
