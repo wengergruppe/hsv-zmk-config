@@ -249,11 +249,11 @@
             layers = <0 1 4 5>;
         };
 
-        // безымянный правый, дом+низ (N+V): _
+        // правая внутренняя колонка, дом+низ (D+B): _
         combo_under {
             timeout-ms = <35>;
             require-prior-idle-ms = <50>;
-            key-positions = <21 33>;
+            key-positions = <18 30>;
             bindings = <&kp UNDERSCORE>;
             layers = <0 1>;
         };
@@ -454,7 +454,7 @@
         combo_fslh_en {
             timeout-ms = <35>;
             require-prior-idle-ms = <50>;
-            key-positions = <18 30>;
+            key-positions = <21 33>;
             bindings = <&kp FSLH>;
             layers = <0>;
         };
@@ -462,7 +462,7 @@
         combo_fslh_ru {
             timeout-ms = <35>;
             require-prior-idle-ms = <50>;
-            key-positions = <18 30>;
+            key-positions = <21 33>;
             bindings = <&kp LS(BSLH)>;
             layers = <1>;
         };
@@ -512,7 +512,7 @@
             display-name = "SYM";
             bindings = <
         &none            &none            &none            &none            &none            &none   &none            &none            &none            &none            &none            &none
-        &none            &kp DLLR         &kp PIPE         &kp GRAVE        &kp BSLH         &kp AMPS   &none            &kp AT           &kp TILDE        &kp CARET        &none            &none
+        &none            &kp TILDE        &kp PIPE         &kp GRAVE        &kp BSLH         &none   &none            &kp DLLR         &kp AMPS         &kp CARET        &kp AT           &none
         &none            &none            &none            &none            &none            &none   &none            &none            &none            &none            &none            &none
                                                                                              &trans                              &trans
                                           &trans           &trans           &trans           &trans             &trans           &trans           &trans           &trans
@@ -572,7 +572,7 @@
             display-name = "SYM-RU";
             bindings = <
         &trans           &trans           &trans           &trans           &trans           &trans   &trans           &trans           &trans           &trans           &trans           &trans
-        &trans           &ru_sym DLLR     &ru_sym PIPE     &ru_sym GRAVE    &kp BSLH         &ru_sym AMPS   &trans           &ru_sym AT       &ru_sym TILDE    &ru_sym CARET    &trans           &trans
+        &trans           &ru_sym TILDE    &ru_sym PIPE     &ru_sym GRAVE    &kp BSLH         &trans   &trans           &ru_sym DLLR     &ru_sym AMPS     &ru_sym CARET    &ru_sym AT       &trans
         &trans           &trans           &trans           &trans           &trans           &trans   &trans           &trans           &trans           &trans           &trans           &trans
                                                                                              &trans                              &trans
                                           &trans           &trans           &trans           &trans             &trans           &trans           &trans           &trans
