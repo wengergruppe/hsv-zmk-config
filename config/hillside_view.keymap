@@ -232,13 +232,13 @@
         // Все остальные комбо вертикальные: две клавиши одной колонки одним пальцем.
         // Ролла по одной колонке не бывает, поэтому idle 50 мс: скобку можно набрать сразу после буквы.
 
-        // внутренние колонки, верх+дом (Y+I, F+D): ( )  — на NUM под ними + - и * /, не цифры
+        // внутренние колонки, верх+дом (Y+I, F+D): ( )
         combo_lpar {
             timeout-ms = <35>;
             require-prior-idle-ms = <50>;
             key-positions = <5 17>;
             bindings = <&kp LPAR>;
-            layers = <0 1 4 5>;
+            layers = <0 1>;
         };
 
         combo_rpar {
@@ -246,7 +246,7 @@
             require-prior-idle-ms = <50>;
             key-positions = <6 18>;
             bindings = <&kp RPAR>;
-            layers = <0 1 4 5>;
+            layers = <0 1>;
         };
 
         // правая внутренняя колонка, дом+низ (D+B): _
@@ -288,23 +288,6 @@
             require-prior-idle-ms = <50>;
             key-positions = <9 21>;
             bindings = <&ru_sym RBKT>;
-            layers = <1>;
-        };
-
-        // безымянный левый, дом+низ: #  (RU — через ru_sym)
-        combo_hash_en {
-            timeout-ms = <35>;
-            require-prior-idle-ms = <50>;
-            key-positions = <14 26>;
-            bindings = <&kp HASH>;
-            layers = <0>;
-        };
-
-        combo_hash_ru {
-            timeout-ms = <35>;
-            require-prior-idle-ms = <50>;
-            key-positions = <14 26>;
-            bindings = <&ru_sym HASH>;
             layers = <1>;
         };
 
@@ -375,7 +358,7 @@
             layers = <1>;
         };
 
-        // средние, верх+дом: ? (.+E) и ! (C+T)  (в ЙЦУКЕН ? = Shift+7, ! = Shift+1)
+        // средние, верх+дом: ? (.+E) и = (C+T)  (в ЙЦУКЕН ? = Shift+7; код = одинаковый, с Shift даёт +)
         combo_qmark_en {
             timeout-ms = <35>;
             require-prior-idle-ms = <50>;
@@ -392,20 +375,21 @@
             layers = <1>;
         };
 
-        combo_excl_en {
+        combo_equal {
             timeout-ms = <35>;
             require-prior-idle-ms = <50>;
             key-positions = <8 20>;
-            bindings = <&kp EXCL>;
-            layers = <0>;
+            bindings = <&kp EQUAL>;
+            layers = <0 1>;
         };
 
-        combo_excl_ru {
+        // безымянный левый, дом+низ: *  (в ЙЦУКЕН тоже Shift+8)
+        combo_star {
             timeout-ms = <35>;
             require-prior-idle-ms = <50>;
-            key-positions = <8 20>;
-            bindings = <&kp LS(N1)>;
-            layers = <1>;
+            key-positions = <14 26>;
+            bindings = <&kp STAR>;
+            layers = <0 1>;
         };
 
         // левый указательный, дом+низ (U+K): '  (в ЙЦУКЕН нет — через ru_sym)
@@ -507,37 +491,37 @@
             >;
         };
 
-        // 3 · только символы, которых нет на базовом слое, в комбо и на NUM; все на домашнем ряду
+        // 3 · только символы, которых нет на базовом слое, в комбо и на NUM; на домашнем ряду, + и % над указательными
         sym_layer {
             display-name = "SYM";
             bindings = <
-        &none            &none            &none            &none            &none            &none   &none            &none            &none            &none            &none            &none
-        &none            &kp TILDE        &kp PIPE         &kp GRAVE        &kp BSLH         &none   &none            &kp DLLR         &kp AMPS         &kp CARET        &kp AT           &none
+        &none            &none            &none            &none            &kp PLUS         &none   &none            &kp PRCNT        &none            &none            &none            &none
+        &none            &kp TILDE        &kp PIPE         &kp GRAVE        &kp BSLH         &kp EXCL   &kp HASH         &kp DLLR         &kp AMPS         &kp CARET        &kp AT           &none
         &none            &none            &none            &none            &none            &none   &none            &none            &none            &none            &none            &none
                                                                                              &trans                              &trans
                                           &trans           &trans           &trans           &trans             &trans           &trans           &trans           &trans
             >;
         };
 
-        // 4 · цифры левой рукой, 0 на мизинце; справа * = и F-клавиши (F10–F12 в пятом столбце); Ctrl и Alt там же, где на основном слое
+        // 4 · цифры левой рукой, 0 на мизинце; справа F-клавиши (F10–F12 в пятом столбце), символов нет; Ctrl и Alt там же, где на основном слое
         num_layer {
             display-name = "NUM";
             bindings = <
-        &none            &kp PRCNT        &kp N7           &kp N8           &kp N9           &kp PLUS   &kp STAR         &kp F7           &kp F8           &kp F9           &kp F10          &td_boot
+        &none            &none            &kp N7           &kp N8           &kp N9           &none   &none            &kp F7           &kp F8           &kp F9           &kp F10          &td_boot
         &none            &kp N0           &kp N4           &kp N5           &kp N6           &none   &none            &kp F4           &kp F5           &kp F6           &kp F11          &none
-        &none            &none            &kp N1           &kp N2           &kp N3           &kp DOT   &kp EQUAL        &kp F1           &kp F2           &kp F3           &kp F12          &none
+        &none            &none            &kp N1           &kp N2           &kp N3           &none   &none            &kp F1           &kp F2           &kp F3           &kp F12          &none
                                                                                              &trans                              &trans
                                           &trans           &trans           &kp LCTRL        &trans             &trans           &trans           &kp LALT         &trans
             >;
         };
 
-        // 5 · условный: RU + NUM, точка ЙЦУКЕН
+        // 5 · условный: RU + NUM, пока пустой (оставлен, чтобы не сдвигать номера слоёв)
         num_ru_layer {
             display-name = "NUM-RU";
             bindings = <
         &trans           &trans           &trans           &trans           &trans           &trans   &trans           &trans           &trans           &trans           &trans           &trans
         &trans           &trans           &trans           &trans           &trans           &trans   &trans           &trans           &trans           &trans           &trans           &trans
-        &trans           &trans           &trans           &trans           &trans           &kp FSLH   &trans           &trans           &trans           &trans           &trans           &trans
+        &trans           &trans           &trans           &trans           &trans           &trans   &trans           &trans           &trans           &trans           &trans           &trans
                                                                                              &trans                              &trans
                                           &trans           &trans           &trans           &trans             &trans           &trans           &trans           &trans
             >;
@@ -572,7 +556,7 @@
             display-name = "SYM-RU";
             bindings = <
         &trans           &trans           &trans           &trans           &trans           &trans   &trans           &trans           &trans           &trans           &trans           &trans
-        &trans           &ru_sym TILDE    &ru_sym PIPE     &ru_sym GRAVE    &kp BSLH         &trans   &trans           &ru_sym DLLR     &ru_sym AMPS     &ru_sym CARET    &ru_sym AT       &trans
+        &trans           &ru_sym TILDE    &ru_sym PIPE     &ru_sym GRAVE    &kp BSLH         &kp LS(N1)   &ru_sym HASH     &ru_sym DLLR     &ru_sym AMPS     &ru_sym CARET    &ru_sym AT       &trans
         &trans           &trans           &trans           &trans           &trans           &trans   &trans           &trans           &trans           &trans           &trans           &trans
                                                                                              &trans                              &trans
                                           &trans           &trans           &trans           &trans             &trans           &trans           &trans           &trans
