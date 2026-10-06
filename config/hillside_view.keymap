@@ -491,13 +491,13 @@
             >;
         };
 
-        // 3 · только символы, которых нет на базовом слое, в комбо и на NUM; на домашнем ряду, + и % над указательными
+        // 3 · только символы, которых нет на базовом слое, в комбо и на NUM; на домашнем ряду; над указательными + и %, под ними ! и #
         sym_layer {
             display-name = "SYM";
             bindings = <
         &none            &none            &none            &none            &kp PLUS         &none   &none            &kp PRCNT        &none            &none            &none            &none
-        &none            &kp TILDE        &kp PIPE         &kp GRAVE        &kp BSLH         &kp EXCL   &kp HASH         &kp DLLR         &kp AMPS         &kp CARET        &kp AT           &none
-        &none            &none            &none            &none            &none            &none   &none            &none            &none            &none            &none            &none
+        &none            &kp TILDE        &kp PIPE         &kp GRAVE        &kp BSLH         &none   &none            &kp DLLR         &kp AMPS         &kp CARET        &kp AT           &none
+        &none            &none            &none            &none            &kp EXCL         &none   &none            &kp HASH         &none            &none            &none            &none
                                                                                              &trans                              &trans
                                           &trans           &trans           &trans           &trans             &trans           &trans           &trans           &trans
             >;
@@ -556,8 +556,8 @@
             display-name = "SYM-RU";
             bindings = <
         &trans           &trans           &trans           &trans           &trans           &trans   &trans           &trans           &trans           &trans           &trans           &trans
-        &trans           &ru_sym TILDE    &ru_sym PIPE     &ru_sym GRAVE    &kp BSLH         &kp LS(N1)   &ru_sym HASH     &ru_sym DLLR     &ru_sym AMPS     &ru_sym CARET    &ru_sym AT       &trans
-        &trans           &trans           &trans           &trans           &trans           &trans   &trans           &trans           &trans           &trans           &trans           &trans
+        &trans           &ru_sym TILDE    &ru_sym PIPE     &ru_sym GRAVE    &kp BSLH         &trans   &trans           &ru_sym DLLR     &ru_sym AMPS     &ru_sym CARET    &ru_sym AT       &trans
+        &trans           &trans           &trans           &trans           &kp LS(N1)       &trans   &trans           &ru_sym HASH     &trans           &trans           &trans           &trans
                                                                                              &trans                              &trans
                                           &trans           &trans           &trans           &trans             &trans           &trans           &trans           &trans
             >;
