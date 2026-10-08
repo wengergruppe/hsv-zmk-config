@@ -234,7 +234,7 @@
 
         // внутренние колонки, верх+дом (Y+I, F+D): ( )
         combo_lpar {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <5 17>;
             bindings = <&kp LPAR>;
@@ -242,7 +242,7 @@
         };
 
         combo_rpar {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <6 18>;
             bindings = <&kp RPAR>;
@@ -251,7 +251,7 @@
 
         // правая внутренняя колонка, дом+низ (D+B): _
         combo_under {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <18 30>;
             bindings = <&kp UNDERSCORE>;
@@ -260,7 +260,7 @@
 
         // безымянные, верх+дом: [ ]  (RU — через ru_sym)
         combo_lbkt_en {
-            timeout-ms = <35>;
+            timeout-ms = <60>;
             require-prior-idle-ms = <50>;
             key-positions = <2 14>;
             bindings = <&kp LBKT>;
@@ -268,7 +268,7 @@
         };
 
         combo_lbkt_ru {
-            timeout-ms = <35>;
+            timeout-ms = <60>;
             require-prior-idle-ms = <50>;
             key-positions = <2 14>;
             bindings = <&ru_sym LBKT>;
@@ -276,7 +276,7 @@
         };
 
         combo_rbkt_en {
-            timeout-ms = <35>;
+            timeout-ms = <60>;
             require-prior-idle-ms = <50>;
             key-positions = <9 21>;
             bindings = <&kp RBKT>;
@@ -284,7 +284,7 @@
         };
 
         combo_rbkt_ru {
-            timeout-ms = <35>;
+            timeout-ms = <60>;
             require-prior-idle-ms = <50>;
             key-positions = <9 21>;
             bindings = <&ru_sym RBKT>;
@@ -293,7 +293,7 @@
 
         // указательные, верх+дом: { }  (RU — через ru_sym)
         combo_lbrc_en {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <4 16>;
             bindings = <&kp LBRC>;
@@ -301,7 +301,7 @@
         };
 
         combo_lbrc_ru {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <4 16>;
             bindings = <&ru_sym LBRC>;
@@ -309,7 +309,7 @@
         };
 
         combo_rbrc_en {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <7 19>;
             bindings = <&kp RBRC>;
@@ -317,7 +317,7 @@
         };
 
         combo_rbrc_ru {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <7 19>;
             bindings = <&ru_sym RBRC>;
@@ -326,7 +326,7 @@
 
         // средний левый, дом+низ (E+J): :  (в ЙЦУКЕН «:» = Shift+6)
         combo_colon_en {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <15 27>;
             bindings = <&kp COLON>;
@@ -334,7 +334,7 @@
         };
 
         combo_colon_ru {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <15 27>;
             bindings = <&kp LS(N6)>;
@@ -343,7 +343,7 @@
 
         // средний правый, дом+низ (T+W): ;  (в ЙЦУКЕН «;» = Shift+4)
         combo_semi_en {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <20 32>;
             bindings = <&kp SEMI>;
@@ -351,7 +351,7 @@
         };
 
         combo_semi_ru {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <20 32>;
             bindings = <&kp LS(N4)>;
@@ -360,7 +360,7 @@
 
         // средние, верх+дом: ? (.+E) и = (C+T)  (в ЙЦУКЕН ? = Shift+7; код = одинаковый, с Shift даёт +)
         combo_qmark_en {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <3 15>;
             bindings = <&kp QMARK>;
@@ -368,7 +368,7 @@
         };
 
         combo_qmark_ru {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <3 15>;
             bindings = <&kp LS(N7)>;
@@ -376,7 +376,7 @@
         };
 
         combo_equal {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <8 20>;
             bindings = <&kp EQUAL>;
@@ -385,7 +385,7 @@
 
         // безымянный левый, дом+низ: *  (в ЙЦУКЕН тоже Shift+8)
         combo_star {
-            timeout-ms = <35>;
+            timeout-ms = <60>;
             require-prior-idle-ms = <50>;
             key-positions = <14 26>;
             bindings = <&kp STAR>;
@@ -394,7 +394,7 @@
 
         // левый указательный, дом+низ (U+K): '  (в ЙЦУКЕН нет — через ru_sym)
         combo_sqt_en {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <16 28>;
             bindings = <&kp SQT>;
@@ -402,7 +402,7 @@
         };
 
         combo_sqt_ru {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <16 28>;
             bindings = <&ru_sym SQT>;
@@ -411,7 +411,7 @@
 
         // правый указательный, дом+низ (H+M): "  (в ЙЦУКЕН " = Shift+2)
         combo_dqt_en {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <19 31>;
             bindings = <&kp DQT>;
@@ -419,7 +419,7 @@
         };
 
         combo_dqt_ru {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <19 31>;
             bindings = <&kp LS(N2)>;
@@ -428,7 +428,7 @@
 
         // внутренние колонки, дом+низ: - (I+X) и / (D+B)  (в ЙЦУКЕН / = Shift+\)
         combo_minus {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <50>;
             key-positions = <17 29>;
             bindings = <&kp MINUS>;
@@ -436,7 +436,7 @@
         };
 
         combo_fslh_en {
-            timeout-ms = <35>;
+            timeout-ms = <60>;
             require-prior-idle-ms = <50>;
             key-positions = <21 33>;
             bindings = <&kp FSLH>;
@@ -444,7 +444,7 @@
         };
 
         combo_fslh_ru {
-            timeout-ms = <35>;
+            timeout-ms = <60>;
             require-prior-idle-ms = <50>;
             key-positions = <21 33>;
             bindings = <&kp LS(BSLH)>;
